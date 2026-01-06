@@ -1,0 +1,577 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scrollbar-rounded::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid blue;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+.loader8 {
+  width: 22px;
+  height: 22px;
+  border: 3.2px solid blue;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+.loader1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #FFF;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader5 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid blue;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader6 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid white;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+@keyframes square-animation {
+ 0% {
+  left: 0;
+  top: 0;
+ }
+
+ 10.5% {
+  left: 0;
+  top: 0;
+ }
+
+ 12.5% {
+  left: 32px;
+  top: 0;
+ }
+
+ 23% {
+  left: 32px;
+  top: 0;
+ }
+
+ 25% {
+  left: 64px;
+  top: 0;
+ }
+
+ 35.5% {
+  left: 64px;
+  top: 0;
+ }
+
+ 37.5% {
+  left: 64px;
+  top: 32px;
+ }
+
+ 48% {
+  left: 64px;
+  top: 32px;
+ }
+
+ 50% {
+  left: 32px;
+  top: 32px;
+ }
+
+ 60.5% {
+  left: 32px;
+  top: 32px;
+ }
+
+ 62.5% {
+  left: 32px;
+  top: 64px;
+ }
+
+ 73% {
+  left: 32px;
+  top: 64px;
+ }
+
+ 75% {
+  left: 0;
+  top: 64px;
+ }
+
+ 85.5% {
+  left: 0;
+  top: 64px;
+ }
+
+ 87.5% {
+  left: 0;
+  top: 32px;
+ }
+
+ 98% {
+  left: 0;
+  top: 32px;
+ }
+
+ 100% {
+  left: 0;
+  top: 0;
+ }
+}
+
+.loader2 {
+ position: relative;
+ width: 96px;
+ height: 96px;
+ transform: rotate(45deg);
+}
+
+.loader-square {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 28px;
+ height: 28px;
+ margin: 2px;
+ border-radius: 0px;
+ background: #0066ff;
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+ animation: square-animation 10s ease-in-out infinite both;
+}
+
+.loader-square:nth-of-type(0) {
+ animation-delay: 0s;
+}
+
+.loader-square:nth-of-type(1) {
+ animation-delay: -1.4285714286s;
+}
+
+.loader-square:nth-of-type(2) {
+ animation-delay: -2.8571428571s;
+}
+
+.loader-square:nth-of-type(3) {
+ animation-delay: -4.2857142857s;
+}
+
+.loader-square:nth-of-type(4) {
+ animation-delay: -5.7142857143s;
+}
+
+.loader-square:nth-of-type(5) {
+ animation-delay: -7.1428571429s;
+}
+
+.loader-square:nth-of-type(6) {
+ animation-delay: -8.5714285714s;
+}
+
+.loader-square:nth-of-type(7) {
+ animation-delay: -10s;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.calculation-box{
+height: 75px;
+width: 150px;
+position: fixed;
+bottom: 40px;
+right: 10px;
+z-index: 50;
+background-color: rgba(255, 255, 255, 0.9);
+padding: 15px;
+text-align: center;
+}
+ /*
+p {
+font-family: 'Open Sans';
+margin: 0;
+font-size: 13px;
+}*/
+
+.loader6 {
+  width: 20.8px;
+  height: 20.8px;
+  color: blue;
+  position: relative;
+  background: radial-gradient(6.4px,currentColor 94%,#0000);
+}
+
+.loader6:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(4.08px at bottom right,#0000 94%,currentColor) top    left,
+          radial-gradient(4.08px at bottom left ,#0000 94%,currentColor) top    right,
+          radial-gradient(4.08px at top    right,#0000 94%,currentColor) bottom left,
+          radial-gradient(4.08px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size: 11.4px 11.4px;
+  background-repeat: no-repeat;
+  animation: loader6 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes loader6 {
+  33% {
+    inset: -8.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -8.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+
+
+
+
+
+.loader3, .loader3:before, .loader3:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+.loader3 {
+  color: #0677c2;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+.loader3:before,
+.loader3:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader3:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+.loader3:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+  40% { box-shadow: 0 2.5em 0 0 }
+}
+    
+.loader7{
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 100%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader7::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+.loader4 {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 97%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader4::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+
+/* Hide the default checkbox */
+.container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+ border-radius: 5px;
+}
+
+.container {
+ display: block;
+ position: relative;
+ cursor: pointer;
+ font-size: 16px;
+ user-select: none;
+ border-radius: 5px;
+ box-shadow: 2px 2px 0px rgb(183, 183, 183);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+ position: relative;
+ top: 0;
+ left: 0;
+ height: 1.3em;
+ width: 1.3em;
+ background-color: #ccc;
+ border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+ box-shadow: 3px 3px 0px rgb(183, 183, 183);
+ transition: all 0.2s;
+ opacity: 1;
+ background-image: linear-gradient(45deg, rgb(100, 61, 219) 0%, rgb(217, 21, 239) 100%);
+}
+
+.container input ~ .checkmark {
+ transition: all 0.2s;
+ opacity: 1;
+ box-shadow: 1px 1px 0px rgb(183, 183, 183);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ opacity: 0;
+ transition: all 0.2s;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+ opacity: 1;
+ transition: all 0.2s;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+ left: 0.45em;
+ top: 0.25em;
+ width: 0.25em;
+ height: 0.5em;
+ border: solid white;
+ border-width: 0 0.15em 0.15em 0;
+ transform: rotate(45deg);
+}
+
+
+
+/* Custom styling for the Annotorious Toolbar */
+.a9s-toolbar {
+  background-color: #333; /* Change background color */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 5px; /* Add padding */
+  display: flex;
+  flex-wrap: wrap;/* Ensure buttons are in a row */
+  gap: 6px; /* Add gap between buttons */
+}
+
+/* Style the individual buttons within the toolbar */
+.a9s-toolbar button {
+  background-color: #555; /* Change button background color */
+  color: white; /* Change button text color */
+  border: 1px solid #555; /* Add button border */
+  border-radius: 3px; /* Add rounded corners to buttons */
+  padding: 3px; 
+  margin:  0;
+  height:  32px;
+  width:  32px;/* Add padding to buttons */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Active state for the polygon button */
+.a9s-toolbar .polygon.active button {
+  background-color: #777; /* Change button background color in active state */
+}
+
+/* Hover effect for buttons */
+.a9s-toolbar button:hover {
+  background-color: #777; /* Change button background color on hover */
+}
+
+.a9s-toolbar-btn.active {
+  background-color:rgba(0,0,0,0.3);
+  border-color: blue;
+  box-shadow:0px -10px 50px rgb(0, 0, 255,0.6);
+}
+
+.a9s-toolbar-btn.active svg * {
+  stroke:rgba(255,255,255,0.7);
+}
+
+.a9s-toolbar-btn.active.mouse path{
+  fill: rgba(255,255,255,0.6);
+}
+
+.a9s-toolbar-btn.active g.handles circle {
+  stroke:#fff;
+  fill:rgba(0,0,0,0.2);
+}
+
+
+.a9s-toolbar-btn svg * {
+  stroke-width:5px;
+  fill:none;
+  stroke:#262626;
+}
+
+.r6o-editor{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Custom scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
